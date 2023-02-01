@@ -85,7 +85,7 @@ sample = sample(1:100, 10, replace=TRUE)
 sample
 ```
 
-    ##  [1] 89 23 51 11 63 15 99 87 24  3
+    ##  [1] 84  4 39 71 19 63 15 47 25 29
 
 ## a. What is the median? What is the mean? Is there a difference between the two? Why?
 
@@ -95,7 +95,7 @@ mean = mean(sample)
 sprintf("The mean in this sample is: %s", mean)
 ```
 
-    ## [1] "The mean in this sample is: 46.5"
+    ## [1] "The mean in this sample is: 39.6"
 
 ``` r
 # Find the median of the sample
@@ -103,7 +103,7 @@ median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
 
-    ## [1] "The median in this sample is: 37.5"
+    ## [1] "The median in this sample is: 34"
 
 ## b. Compute the standard deviation
 
@@ -113,7 +113,7 @@ sd = sd(sample)
 sprintf("The standard deviation of this sample is: %s", sd)
 ```
 
-    ## [1] "The standard deviation of this sample is: 36.053201429739"
+    ## [1] "The standard deviation of this sample is: 26.2094130673186"
 
 ## c. Create a plot to visualize these data
 
@@ -133,12 +133,10 @@ sample = sample(1:100, 100, replace=TRUE)
 sample
 ```
 
-    ##   [1]  21  45  70  66  43  21  19  29  23  97  27  12  35  51  57  13   4  11
-    ##  [19]  40  45  35 100  90  92  41  91  49  27  84   5  32   5  36  53  35  13
-    ##  [37]  51  55  89  29  89  55  94  31  82  31  69  26  87  46  44  79  35  97
-    ##  [55]  91  69  40  12  21  23  39  23  27  10  86  83  80  77   4  93  72  71
-    ##  [73]  51  96  51  83  56  88  27  74  70  99  36  36  76  26  10  41  67  56
-    ##  [91]  97  42  74  20  21  15  84  15  56  52
+    ##   [1] 69 12 33 78 52  1 20 87 13 95 95 73 25 33 10 16 64 74 79  4 48  7 55 94  7
+    ##  [26] 94 63 18  5 64 58 98 33 29  5 74  3 45 57 34 29 40 22 77 60 63 13 44 54 45
+    ##  [51] 22 80 98 91 70 85 49 77 69 73 90 31 33 72 32 18 18 92 67 52  2 65 28 35 21
+    ##  [76]  3 19 99 20 12 43 32 30 37 32 29 29 62 90 54 78 23  7 58 33 73 34 53 29 79
 
 ## a. What is the median, mean, and standard deviation of this sample?
 
@@ -148,7 +146,7 @@ mean = mean(sample)
 sprintf("The mean in this sample is: %s", mean)
 ```
 
-    ## [1] "The mean in this sample is: 50.46"
+    ## [1] "The mean in this sample is: 46.99"
 
 ``` r
 # Find the median of the sample
@@ -156,7 +154,7 @@ median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
 
-    ## [1] "The median in this sample is: 45.5"
+    ## [1] "The median in this sample is: 44.5"
 
 ``` r
 # Compute the standard deviation of the sample
@@ -164,7 +162,7 @@ sd = sd(sample)
 sprintf("The standard deviation of this sample is: %s", sd)
 ```
 
-    ## [1] "The standard deviation of this sample is: 28.459938172949"
+    ## [1] "The standard deviation of this sample is: 28.5655351425419"
 
 ## b. Create a plot to visualize these data
 
