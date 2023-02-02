@@ -72,6 +72,13 @@ sprintf("The mode age in this sample is: %s", mode)
 
 ## c. What can you say about the three measures of central tendency?
 
+The three measures of central tendency are relatively similar (\~25).
+This tells us that the data set of Participant Ages do not have
+extraneous outliers that may have affected the mean of ages. Therefore,
+because all three measures of central tendency are \~25 years of age, it
+lets us know that the normal or ‘average’ age for the participants in
+this sample is 25.
+
 # Question 2
 
 Create a random selection of 10 numbers ranging from 1 to 100 (using the
@@ -85,7 +92,7 @@ sample = sample(1:100, 10, replace=TRUE)
 sample
 ```
 
-    ##  [1]  7 49 77 82 60 51  3 34 89  9
+    ##  [1] 81 85 29 98 26 37 78 59 41 85
 
 ## a. What is the median? What is the mean? Is there a difference between the two? Why?
 
@@ -95,7 +102,7 @@ mean = mean(sample)
 sprintf("The mean in this sample is: %s", mean)
 ```
 
-    ## [1] "The mean in this sample is: 46.1"
+    ## [1] "The mean in this sample is: 61.9"
 
 ``` r
 # Find the median of the sample
@@ -103,7 +110,14 @@ median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
 
-    ## [1] "The median in this sample is: 50"
+    ## [1] "The median in this sample is: 68.5"
+
+Yes, there is a minor difference between the mean and median. This is
+most likely the case because the sample of 10 values, while randomly
+samples, is skewed slightly towards the left – or the sample contains
+more values closer to 60. This happens because the mean outlines the
+center of gravity of data set whereas median highlights the middle-most
+value of the data set.
 
 ## b. Compute the standard deviation
 
@@ -113,7 +127,7 @@ sd = sd(sample)
 sprintf("The standard deviation of this sample is: %s", sd)
 ```
 
-    ## [1] "The standard deviation of this sample is: 32.0050343262153"
+    ## [1] "The standard deviation of this sample is: 26.7309641510448"
 
 ## c. Create a plot to visualize these data
 
@@ -133,12 +147,10 @@ sample = sample(1:100, 100, replace=TRUE)
 sample
 ```
 
-    ##   [1]  16  57  36  61  48  91  19  78  55  80  36  78  47  49  95  96 100  37
-    ##  [19]  87  73  92  74  60  76  29  62  23   7  89  47  30  18  65  55  71  47
-    ##  [37]  81   2  16  70  81   2  69  38   3  29  68  28  23  43  50  20  42  54
-    ##  [55]  31  67  74  62  44   3  29  69  38  26  85  35  42  27  35  40  15  79
-    ##  [73]  10  16  88  59  53  53  93  20  93  15   8  86  82  91  45  24  34  86
-    ##  [91]  63  68   9  55  69  32  94  43  60  93
+    ##   [1] 68 41 13 94 21  1 92 38 65 16 22 71 76 66  7 33 68 50 34 51 39 24 66 55 73
+    ##  [26]  7 97 20 26 20 38 91 66 88 45 14 55 56 81 75 95 44 34 52 12 21 61 98 26 38
+    ##  [51] 46 86  2 23 27 59 12 10 16 14 54 31 29 72 75 98 31 86 63 58 86 30 50 87 62
+    ##  [76] 31 28  4  2 67 73 21 17 11 65 48 58 61 81 28 16 73 19 84 80  7 33 46 16 79
 
 ## a. What is the median, mean, and standard deviation of this sample?
 
@@ -148,7 +160,7 @@ mean = mean(sample)
 sprintf("The mean in this sample is: %s", mean)
 ```
 
-    ## [1] "The mean in this sample is: 51.46"
+    ## [1] "The mean in this sample is: 46.99"
 
 ``` r
 # Find the median of the sample
@@ -156,7 +168,7 @@ median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
 
-    ## [1] "The median in this sample is: 51.5"
+    ## [1] "The median in this sample is: 46"
 
 ``` r
 # Compute the standard deviation of the sample
@@ -164,7 +176,7 @@ sd = sd(sample)
 sprintf("The standard deviation of this sample is: %s", sd)
 ```
 
-    ## [1] "The standard deviation of this sample is: 27.2717043579212"
+    ## [1] "The standard deviation of this sample is: 27.8021491066697"
 
 ## b. Create a plot to visualize these data
 
@@ -176,6 +188,21 @@ plot(sample)
 ![](Assignment_1_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ## c. How do these values from your sample of 100 compare to your first sample of 10? Are they similar/different? Why? \[If you expected them to be similar and they are not (or vice versa), why aren’t they similar (or different)?\]
+
+I expected both the sample of 100 values and 10 values to have no
+distinct correlation since they are both random samples. Observing both
+of the plots, the plot with 100 values is more clearly random, but the
+plot with 10 values also shows a non-correlational relationship between
+the points. Furthermore, the high standard deviation for the sample with
+100 values tells us that the data is greatly dispersed in relation to
+the mean, which deters a correlation between the values.
+
+What was different was that the sample of 100 values has a greater
+difference between the mean and median, which tells us that it is even
+more skewed towards the left compared to the sample of 10 values. This
+is most likely due to the fact that in a sample with more data values,
+the mean underestimates the most common values in a negatively skewed
+distribution. Also, the higher
 
 # Question 3
 
@@ -273,7 +300,17 @@ sprintf("The median reaction time in the Candy-Present group: %s", median)
 
     ## [1] "The median reaction time in the Candy-Present group: 533"
 
+Observing the mean and median for both groups, it is clear that the
+group with Candy-Present has generally higher values of reaction time.
+Meaning, the group with candy on average took more time to solve the
+word-problems.
+
 ## b. If you changed the highest score in the Candy-Absent group to be 10 times the original value, what would happen to the mean? What about median?
+
+I would expect the mean to be largely affected by this change as the
+mean is more sensitive to outliers. I would expect nothing to change
+with the median as the order and number of values will remain the same,
+which would not affect the middle value of the group sample.
 
 ``` r
 # Find the index of the max reaction time in the Candy Absent group
@@ -300,6 +337,13 @@ sprintf("The median reaction time in the altered Candy-Absent group: %s", median
 
 ## c. If you changed the highest score in the Candy-Present group to be one tenth is original value, what would happen to the mean? What about the median?
 
+I would expect the mean to be still affected by this change as the mean
+is more sensitive to outliers and scaling a value to be smaller (one
+tenth of its original value), would be an outlier. I would expect the
+median to change as well, because now the highest score will be the
+smallest score, which affects the order of the values, which would
+affect the middle value of the group sample.
+
 ``` r
 # Find the index of the max reaction time in the Candy Present group
 max_time = which.max(candy_present$Reaction_Time)
@@ -307,14 +351,14 @@ max_time = candy_present$Participant[[max_time]]
 
 # Create a copy of the candy_present data frame and change the value of the highest score 
 candy_present_copy = cbind(candy_present)
-candy_present_copy = replace(candy_present_copy$Reaction_Time, candy_present_copy$Participant == max_time, (candy_present_copy$Reaction_Time[candy_present_copy$Participant == max_time]*10))
+candy_present_copy = replace(candy_present_copy$Reaction_Time, candy_present_copy$Participant == max_time, (candy_present_copy$Reaction_Time[candy_present_copy$Participant == max_time]*0.1))
 
 # Find the mean of reaction times in the altered Candy Present group
 mean = mean(candy_present_copy)
 sprintf("The mean reaction time in the altered Candy-Present group is: %s", mean)
 ```
 
-    ## [1] "The mean reaction time in the altered Candy-Present group is: 975.333333333333"
+    ## [1] "The mean reaction time in the altered Candy-Present group is: 517.953333333333"
 
 ``` r
 # Find the median of reaction time in the altered Candy Present group
@@ -322,7 +366,7 @@ median = median(candy_present_copy)
 sprintf("The median reaction time in the altered Candy-Present group: %s", median)
 ```
 
-    ## [1] "The median reaction time in the altered Candy-Present group: 533"
+    ## [1] "The median reaction time in the altered Candy-Present group: 510"
 
 # Question 4
 
@@ -369,6 +413,12 @@ legend("topleft", legend = c("Pre-Test", "Post-Test"),
 
 ![](Assignment_1_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
+It is difficult to discern from the plot if there is a relationship
+between scores before and after using the studying technique. Vaguely,
+it appears that there is somewhat of a positive correlation between pre-
+and post-test scores – meaning students who performed higher on the
+pre-test are likely to also perform higher on the post-test.
+
 ## b. Now check to see if there is a correlation between participants’ pre- and post-test scores. What is the correlation? You can use the cor() function in R.
 
 ``` r
@@ -381,6 +431,19 @@ sprintf("The correlation between participants' pre- and post-test scores is: %s"
 
 ## c. What do you think of this teacher’s experiment to test their studying technique? Do you think they did a good experiment to yield appropriate data to test the effectiveness of their studying technique?
 
+No, I do not think the teacher’s experiment to test the *effectiveness*
+of their studying technique was a good experiment. Using a correlation
+to find the relationship between the pre- and post-test tells us nothing
+about how the *studying technique* positively effected the scores of
+students – it only tells us how the pre- and post-test scores are
+related (may be dependent on student’s innate ability).
+
 ### If yes, why? Be concrete about what you think the teacher did right.
 
 ### If no, give one suggestion (besides running with a larger sample size) the teacher could do to improve their experiment?
+
+I would suggest for the teacher to implement a control group that does
+not utilize the studying technique and test group that does utilize the
+studying technique. By doing this, the teacher can clearly use a
+comparison of mean scores (t-test) to identify how effective using the
+studying method is compared to not using the studying method.

@@ -53,6 +53,7 @@ sprintf("The mode age in this sample is: %s", mode)
 ```
 
 ## c. What can you say about the three measures of central tendency?
+The three measures of central tendency are relatively similar (~25). This tells us that the data set of Participant Ages do not have extraneous outliers that may have affected the mean of ages. Therefore, because all three measures of central tendency are ~25 years of age, it lets us know that the normal or 'average' age for the participants in this sample is 25. 
 
 # Question 2 
 Create a random selection of 10 numbers ranging from 1 to 100 (using the sample() function with replace set to TRUE). You'll need to store this sample into an object (i.e., create a variable) so that you can do calculations with the sample.
@@ -74,6 +75,7 @@ sprintf("The mean in this sample is: %s", mean)
 median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
+Yes, there is a minor difference between the mean and median. This is most likely the case because the sample of 10 values, while randomly samples, is skewed slightly towards the left -- or the sample contains more values closer to 60. This happens because the mean outlines the center of gravity of data set whereas median highlights the middle-most value of the data set.
 
 ## b. Compute the standard deviation 
 
@@ -123,6 +125,9 @@ plot(sample)
 ```
 
 ## c. How do these values from your sample of 100 compare to your first sample of 10? Are they similar/different? Why? [If you expected them to be similar and they are not (or vice versa), why aren’t they similar (or different)?]
+I expected both the sample of 100 values and 10 values to have no distinct correlation since they are both random samples. Observing both of the plots, the plot with 100 values is more clearly random, but the plot with 10 values also shows a non-correlational relationship between the points. Furthermore, the high standard deviation for the sample with 100 values tells us that the data is greatly dispersed in relation to the mean, which deters a correlation between the values. 
+
+What was different was that the sample of 100 values has a greater difference between the mean and median, which tells us that it is even more skewed towards the left compared to the sample of 10 values. This is most likely due to the fact that in a sample with more data values, the mean underestimates the most common values in a negatively skewed distribution. Also, the higher 
 
 # Question 3
 A researcher wants to study the impact of the presence (in the room) of a sweet snack on task
@@ -169,8 +174,11 @@ sprintf("The mean reaction time in the Candy-Present group is: %s", mean)
 median = median(candy_present$Reaction_Time)
 sprintf("The median reaction time in the Candy-Present group: %s", median)
 ```
+Observing the mean and median for both groups, it is clear that the group with Candy-Present has generally higher values of reaction time. Meaning, the group with candy on average took more time to solve the word-problems. 
 
 ## b. If you changed the highest score in the Candy-Absent group to be 10 times the original value, what would happen to the mean? What about median? 
+
+I would expect the mean to be largely affected by this change as the mean is more sensitive to outliers. I would expect nothing to change with the median as the order and number of values will remain the same, which would not affect the middle value of the group sample. 
 
 ```{r, eval=TRUE}
 # Find the index of the max reaction time in the Candy Absent group
@@ -191,6 +199,8 @@ sprintf("The median reaction time in the altered Candy-Absent group: %s", median
 
 ## c.  If you changed the highest score in the Candy-Present group to be one tenth is original value, what would happen to the mean? What about the median? 
 
+I would expect the mean to be still affected by this change as the mean is more sensitive to outliers and scaling a value to be smaller (one tenth of its original value), would be an outlier. I would expect the median to change as well, because now the highest score will be the smallest score, which affects the order of the values, which would affect the middle value of the group sample. 
+
 ```{r, eval=TRUE}
 # Find the index of the max reaction time in the Candy Present group
 max_time = which.max(candy_present$Reaction_Time)
@@ -198,7 +208,7 @@ max_time = candy_present$Participant[[max_time]]
 
 # Create a copy of the candy_present data frame and change the value of the highest score 
 candy_present_copy = cbind(candy_present)
-candy_present_copy = replace(candy_present_copy$Reaction_Time, candy_present_copy$Participant == max_time, (candy_present_copy$Reaction_Time[candy_present_copy$Participant == max_time]*10))
+candy_present_copy = replace(candy_present_copy$Reaction_Time, candy_present_copy$Participant == max_time, (candy_present_copy$Reaction_Time[candy_present_copy$Participant == max_time]*0.1))
 
 # Find the mean of reaction times in the altered Candy Present group
 mean = mean(candy_present_copy)
@@ -233,6 +243,8 @@ legend("topleft", legend = c("Pre-Test", "Post-Test"),
        pch = 19, col = c("red", "blue"))
 ```
 
+It is difficult to discern from the plot if there is a relationship between scores before and after using the studying technique. Vaguely, it appears that there is somewhat of a positive correlation between pre- and post-test scores -- meaning students who performed higher on the pre-test are likely to also perform higher on the post-test. 
+
 ## b. Now check to see if there is a correlation between participants’ pre- and post-test scores. What is the correlation? You can use the cor() function in R.
 
 ```{r, eval=TRUE}
@@ -243,8 +255,12 @@ sprintf("The correlation between participants' pre- and post-test scores is: %s"
 
 ## c. What do you think of this teacher’s experiment to test their studying technique? Do you think they did a good experiment to yield appropriate data to test the effectiveness of their studying technique?
 
+No, I do not think the teacher's experiment to test the *effectiveness* of their studying technique was a good experiment. Using a correlation to find the relationship between the pre- and post-test tells us nothing about how the *studying technique* positively effected the scores of students -- it only tells us how the pre- and post-test scores are related (may be dependent on student's innate ability).
+
 ### If yes, why? Be concrete about what you think the teacher did right.
 ### If no, give one suggestion (besides running with a larger sample size) the teacher could do to improve their experiment? 
+
+I would suggest for the teacher to implement a control group that does not utilize the studying technique and test group that does utilize the studying technique. By doing this, the teacher can clearly use a comparison of mean scores (t-test) to identify how effective using the studying method is compared to not using the studying method. 
 
 
 
