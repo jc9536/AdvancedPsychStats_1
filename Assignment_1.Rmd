@@ -3,10 +3,10 @@ title: "Assignment 1"
 author: "Jaimie Chin"
 date: "2023-02-01"
 output: 
-  github_document:
-    html_preview: false
   pdf_document:
     toc: false
+  github_document:
+    html_preview: false
 ---
 
 ```{r setup, include=FALSE}
@@ -75,7 +75,7 @@ sprintf("The mean in this sample is: %s", mean)
 median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
-Yes, there is a minor difference between the mean and median. This is most likely the case because the sample of 10 values, while randomly samples, is skewed slightly towards the left -- or the sample contains more values closer to 60. This happens because the mean outlines the center of gravity of data set whereas median highlights the middle-most value of the data set.
+Yes, there is a minor difference between the mean and median. This is most likely the case because the sample of 10 values, while randomly samples, is skewed slightly towards the left -- or the sample contains more values closer to the left end of the sample. This happens because the mean outlines the center of gravity of data set whereas median highlights the middle-most value of the data set.
 
 ## b. Compute the standard deviation 
 
@@ -125,9 +125,8 @@ plot(sample)
 ```
 
 ## c. How do these values from your sample of 100 compare to your first sample of 10? Are they similar/different? Why? [If you expected them to be similar and they are not (or vice versa), why aren’t they similar (or different)?]
-I expected both the sample of 100 values and 10 values to have no distinct correlation since they are both random samples. Observing both of the plots, the plot with 100 values is more clearly random, but the plot with 10 values also shows a non-correlational relationship between the points. Furthermore, the high standard deviation for the sample with 100 values tells us that the data is greatly dispersed in relation to the mean, which deters a correlation between the values. 
 
-What was different was that the sample of 100 values has a greater difference between the mean and median, which tells us that it is even more skewed towards the left compared to the sample of 10 values. This is most likely due to the fact that in a sample with more data values, the mean underestimates the most common values in a negatively skewed distribution. Also, the higher 
+I expected both the sample of 100 values and 10 values to have no distinct correlation since they are both random samples. Observing both of the plots, the plot with 100 values is more clearly random, but the plot with 10 values also shows a non-correlational relationship between the points. Furthermore, the high standard deviation for both samples tell us that the data is greatly dispersed in relation to the mean, which deters a correlation between the values. 
 
 # Question 3
 A researcher wants to study the impact of the presence (in the room) of a sweet snack on task
@@ -237,10 +236,7 @@ scores
 
 ```{r, eval=TRUE}
 # Plot Pre-Test & Post-Test 
-plot(scores$Participant, scores$Pre_Test, pch=19, col="red", xlab = "Participant", ylab = "Score")
-points(scores$Participant, scores$Post_Test, pch=19, col = "blue")
-legend("topleft", legend = c("Pre-Test", "Post-Test"),
-       pch = 19, col = c("red", "blue"))
+plot(scores$Pre_Test, scores$Post_Test, pch=19, col="red", xlab = "Pre-Test Score", ylab = "Post-Test Score")
 ```
 
 It is difficult to discern from the plot if there is a relationship between scores before and after using the studying technique. Vaguely, it appears that there is somewhat of a positive correlation between pre- and post-test scores -- meaning students who performed higher on the pre-test are likely to also perform higher on the post-test. 
@@ -261,10 +257,3 @@ No, I do not think the teacher's experiment to test the *effectiveness* of their
 ### If no, give one suggestion (besides running with a larger sample size) the teacher could do to improve their experiment? 
 
 I would suggest for the teacher to implement a control group that does not utilize the studying technique and test group that does utilize the studying technique. By doing this, the teacher can clearly use a comparison of mean scores (t-test) to identify how effective using the studying method is compared to not using the studying method. 
-
-
-
-
-
-
-
