@@ -3,11 +3,6 @@ Data Assignment 1 - Descriptive Statistics
 
 author: "Jaimie Chin"
 date: "2023-02-01"
-output: 
-  pdf_document:
-    toc: false
-  github_document:
-    html_preview: false
 ---
 
 ```{r setup, include=FALSE}
