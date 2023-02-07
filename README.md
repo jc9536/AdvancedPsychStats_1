@@ -1,8 +1,9 @@
 # AdvancedPsychStats_1
 Data Assignment 1 - Descriptive Statistics 
 
-author: "Jaimie Chin"
-date: "2023-02-01"
+author: Jaimie Chin
+date: 2023-02-01
+
 ---
 
 ```{r setup, include=FALSE}
