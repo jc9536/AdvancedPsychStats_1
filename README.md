@@ -90,7 +90,7 @@ sprintf("The standard deviation of this sample is: %s", sd)
 # Create a scatter plot of the sample values
 plot(sample)
 ```
-![10Plot](https://github.com/jc9536/Assignment_1_files/figure-gfm/unnamed-chunk-7-1.png)
+![10Plot](https://github.com/jc9536/AdvancedPsychStats_1/blob/main/Assignment_1_files/figure-gfm/unnamed-chunk-7-1.png?raw=true)
 
 Now create a random sample of 100 numbers ranging from 1 to 100 (again, using the sample()
 function with replace set to TRUE). 
@@ -125,7 +125,7 @@ sprintf("The standard deviation of this sample is: %s", sd)
 # Create a scatter plot of the sample values
 plot(sample)
 ```
-![100Plot](https://github.com/jc9536/Assignment_1_files/figure-gfm/unnamed-chunk-10-1.png)
+![100Plot](https://github.com/jc9536/AdvancedPsychStats_1/blob/main/Assignment_1_files/figure-gfm/unnamed-chunk-10-1.png?raw=true)
 
 ## c. How do these values from your sample of 100 compare to your first sample of 10? Are they similar/different? Why? [If you expected them to be similar and they are not (or vice versa), why aren’t they similar (or different)?]
 
@@ -241,7 +241,7 @@ scores
 # Plot Pre-Test & Post-Test 
 plot(scores$Pre_Test, scores$Post_Test, pch=19, col="red", xlab = "Pre-Test Score", ylab = "Post-Test Score")
 ```
-![CorrPlot](https://github.com/jc9536/Assignment_1_files/figure-gfm/unnamed-chunk-17-1.png)
+![CorrPlot](https://github.com/jc9536/AdvancedPsychStats_1/blob/main/Assignment_1_files/figure-gfm/unnamed-chunk-17-1.png?raw=true)
 
 It is difficult to discern from the plot if there is a relationship between scores before and after using the studying technique. Vaguely, it appears that there is somewhat of a positive correlation between pre- and post-test scores -- meaning students who performed higher on the pre-test are likely to also perform higher on the post-test. 
 
