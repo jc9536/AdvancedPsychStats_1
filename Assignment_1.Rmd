@@ -3,8 +3,7 @@ title: "Assignment 1"
 author: "Jaimie Chin"
 date: "2023-02-01"
 output: 
-  pdf_document:
-    toc: false
+  pdf_document: default 
   github_document:
     html_preview: false
 ---
@@ -61,7 +60,7 @@ Create a random selection of 10 numbers ranging from 1 to 100 (using the sample(
 ```{r, eval=TRUE}
 # Create a sample following the parameters
 # Set a seed for reproducible results
-set.seed(5) 
+set.seed(0) 
 sample = sample(1:100, 10, replace=TRUE)
 sample
 ```
@@ -93,6 +92,10 @@ sprintf("The standard deviation of this sample is: %s", sd)
 # Create a scatter plot of the sample values
 plot(sample)
 ```
+```{r, eval=TRUE}
+# Create a histogram of the sample values
+hist(sample)
+```
 
 Now create a random sample of 100 numbers ranging from 1 to 100 (again, using the sample()
 function with replace set to TRUE). 
@@ -100,7 +103,7 @@ function with replace set to TRUE).
 ```{r, eval=TRUE}
 # Create a sample following the parameters
 # Set a seed for reproducible results
-set.seed(5) 
+set.seed(0) 
 sample = sample(1:100, 100, replace=TRUE)
 sample
 ```
@@ -127,7 +130,10 @@ sprintf("The standard deviation of this sample is: %s", sd)
 # Create a scatter plot of the sample values
 plot(sample)
 ```
-
+```{r, eval=TRUE}
+# Create a histogram of the sample values
+hist(sample)
+```
 ## c. How do these values from your sample of 100 compare to your first sample of 10? Are they similar/different? Why? [If you expected them to be similar and they are not (or vice versa), why aren’t they similar (or different)?]
 
 I expected both the sample of 100 values and 10 values to have no distinct correlation since they are both random samples. Observing both of the plots, the plot with 100 values is more clearly random, but the plot with 10 values also shows a non-correlational relationship between the points. Furthermore, the high standard deviation for both samples tell us that the data is greatly dispersed in relation to the mean, which deters a correlation between the values. 
