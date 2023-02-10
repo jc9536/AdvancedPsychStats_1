@@ -76,7 +76,7 @@ sprintf("The mean in this sample is: %s", mean)
 median = median(sample)
 sprintf("The median in this sample is: %s", median)
 ```
-Yes, there is a minor difference between the mean and median. This is most likely the case because the sample of 10 values, while randomly samples, is skewed slightly towards the left -- or the sample contains more values closer to the left end of the sample. This happens because the mean outlines the center of gravity of data set whereas median highlights the middle-most value of the data set.
+Yes, there is a minor difference between the mean and median. This is most likely the case because the sample of 10 values, while randomly samples, is skewed slightly towards the right -- or the sample contains more values closer to the right end of the sample. This happens because the mean outlines the center of gravity of data set whereas median highlights the middle-most value of the data set.
 
 ## b. Compute the standard deviation 
 
